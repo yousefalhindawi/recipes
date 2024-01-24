@@ -13,13 +13,13 @@ Open a terminal and make sure it is open in the root folder (recipes), write the
 
 ## Prerequisites:
 
-make .env file & make the following variable
+make .env file then put the following variable
 
     REACT_APP_SPOONACULAR_API_KEY=YOUR-API-KEY
     
 to get your YOUR-API-KEY follow these instructions:
 
-    https://spoonacular.com/food-api/docs#Authentication
+    [spoonacular docs#Authentication](https://spoonacular.com/food-api/docs#Authentication).
     
 # Getting Started with Create React App
 
