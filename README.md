@@ -19,7 +19,7 @@ make .env file then put the following variable
     
 to get your YOUR-API-KEY follow these instructions:
 
-    [spoonacular docs#Authentication](https://spoonacular.com/food-api/docs#Authentication).
+    https://spoonacular.com/food-api/docs#Authentication
     
 # Getting Started with Create React App
 
