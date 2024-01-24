@@ -1,3 +1,26 @@
+## Prerequisites:
+
+node.js v18.0.0
+Check if you have it by typing this into a terminal like cmd or git bash.
+
+    node -v
+
+## To install:
+
+Open a terminal and make sure it is open in the root folder (recipes), write the command below, and then run it (by pressing enter on the keyboard):
+
+    npm i
+
+## Prerequisites:
+
+make .env file & make the following variable
+
+    REACT_APP_SPOONACULAR_API_KEY=YOUR-API-KEY
+    
+to get your YOUR-API-KEY follow these instructions:
+
+    https://spoonacular.com/food-api/docs#Authentication
+    
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
