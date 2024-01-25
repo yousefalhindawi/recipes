@@ -1,36 +1,21 @@
 import React, { useCallback, useState } from "react";
 import useFetchRecipes from "../hooks/useFetchRecipes";
+import { BASE_URL_SPOONACULAR_API } from "../constants/constants";
 
 const RecipeSearch = ({ onRecipeSelect }) => {
   const [query, setQuery] = useState("");
   const { fetchRecipes, data, loading, error } = useFetchRecipes();
 
-  //   const handleSearch = () => {
-  //     onRecipeSelect(null);
-  //     fetchRecipes(query);
-  //   };
   const handleSearch = useCallback(() => {
     onRecipeSelect(null);
     fetchRecipes(query);
   }, [onRecipeSelect, fetchRecipes, query]);
 
-  //   const handleRecipeSelect = async (recipe) => {
-  //     try {
-  //       const response = await fetch(
-  //         `https://api.spoonacular.com/recipes/${recipe.id}/information?apiKey=${process.env.REACT_APP_SPOONACULAR_API_KEY}`
-  //       );
-  //       const recipeDetails = await response.json();
-  //       onRecipeSelect(recipeDetails);
-  //     } catch (error) {
-  //       console.error("Error fetching recipe details:", error);
-  //     }
-  //   };
-
   const handleRecipeSelect = useCallback(
     async (recipe) => {
       try {
         const response = await fetch(
-          `https://api.spoonacular.com/recipes/${recipe.id}/information?apiKey=${process.env.REACT_APP_SPOONACULAR_API_KEY}`
+          `${BASE_URL_SPOONACULAR_API}/${recipe.id}/information?apiKey=${process.env.REACT_APP_SPOONACULAR_API_KEY}`
         );
         const recipeDetails = await response.json();
         onRecipeSelect(recipeDetails);
@@ -47,7 +32,7 @@ const RecipeSearch = ({ onRecipeSelect }) => {
         <input
           type="text"
           className="form-control"
-          placeholder="Search for delicious recipes, e.g., 'Chocolate Cake'"
+          placeholder="Search for delicious recipes, e.g., 'Hummus'"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
@@ -71,12 +56,10 @@ const RecipeSearch = ({ onRecipeSelect }) => {
               <li
                 key={recipe.id}
                 className="list-group-item"
-                // onClick={() => onRecipeSelect(recipe)}
               >
                 <button
                   className="btn btn-link p-0 text-left"
                   style={{ cursor: "pointer" }}
-                  //   onClick={() => onRecipeSelect(recipe)}
                   onClick={() => handleRecipeSelect(recipe)}
                 >
                   {recipe.title}

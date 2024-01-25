@@ -1,0 +1,1 @@
+export const BASE_URL_SPOONACULAR_API = 'https://api.spoonacular.com/recipes';
