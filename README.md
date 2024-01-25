@@ -11,8 +11,6 @@ Open a terminal and make sure it is open in the root folder (recipes), write the
 
     npm i
 
-## Prerequisites:
-
 make .env file then put the following variable
 
     REACT_APP_SPOONACULAR_API_KEY=YOUR-API-KEY
