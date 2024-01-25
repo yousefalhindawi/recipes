@@ -5,12 +5,6 @@ Check if you have it by typing this into a terminal like cmd or git bash.
 
     node -v
 
-## To install:
-
-Open a terminal and make sure it is open in the root folder (recipes), write the command below, and then run it (by pressing enter on the keyboard):
-
-    npm i
-
 make .env file then put the following variable
 
     REACT_APP_SPOONACULAR_API_KEY=YOUR-API-KEY
@@ -18,6 +12,12 @@ make .env file then put the following variable
 to get your YOUR-API-KEY follow these instructions:
 
     https://spoonacular.com/food-api/docs#Authentication
+
+## To install:
+
+Open a terminal and make sure it is open in the root folder (recipes), write the command below, and then run it (by pressing enter on the keyboard):
+
+    npm i
     
 # Getting Started with Create React App
 
